@@ -16,3 +16,9 @@ Get your value here https://browser.geekbench.com/cuda-benchmarks For example, 3
 
 Also by default it will use 2x multiplier for 2k+, 3x for 1080p and 6x for 720p so it nicely fits in 144 Hz display without jitter
  
+If your 720/1080p content starts lagging reduce these multipliers (1.2 and 1.4) a bit
+```
+if interpMulti == 3: maxIpps = 1.2 * maxIpps # approximation fix
+elif interpMulti == 6: maxIpps = 1.4 * maxIpps # approximation fix
+```
+
