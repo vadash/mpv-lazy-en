@@ -10,11 +10,12 @@ colorlv = input.get_frame(0).props._ColorRange
 fmt_fin = input.format.id
 
 interpMulti = 2 			# frame rate (integer)
-if video_in_dh <= 820: interpMulti = interpMulti + 1
+if video_in_dh <= 1080: interpMulti = 3
+if video_in_dh <= 720: interpMulti = 6
 GPU = 0 							# The serial number of the graphics card used, 0 is sorted number one
 GPU_t = 3 						# Number of graphics card threads used
 WS_size = 2048        # Constrained video memory size
-maxIpps = 80000000    # Max interpolated pixels per second the GPU is capable of. 80kk is solid starting point for 3070ti
+maxIpps = 80000000    # Max interpolated pixels per second the GPU is capable of. 80kk is solid starting point for 3070ti providing 80% CUDA load
 
 if container_fps > 59 :
 	raise Exception("The source frame rate exceeds the limit and the script has been temporarily disabled")
