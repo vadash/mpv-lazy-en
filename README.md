@@ -2,7 +2,7 @@
 English translation for https://github.com/hooke007/MPV_lazy plus auto scaling for 4K videos
 
 # install
-1) Go to https://github.com/hooke007/MPV_lazy/releases
+1) Go to https://github.com/hooke007/MPV_lazy/releases/tag/20221112
 2) Install `mpv-lazy-XXX.exe`
 3) Override with `mpv-lazy-XXX-rifeCuda.7z`
 4) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
