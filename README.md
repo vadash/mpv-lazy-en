@@ -8,7 +8,7 @@ English translation for https://github.com/hooke007/MPV_lazy plus auto scaling f
 4) Override with these files
 
 # configure
-Open `rife_cuda.vpy` and edit 
+Open `portable_config\vs\rife_cuda.vpy` and edit 
 ```
 maxIpps = 80000000    # Max interpolated pixels per second the GPU is capable of. 80kk is solid starting point for 3070ti providing 80% CUDA load
 ```
