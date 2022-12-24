@@ -1,5 +1,5 @@
 # mpv-lazy-en
-English translation + some tweaks to https://github.com/hooke007/MPV_lazy
+English translation + some tweaks to https://github.com/hooke007/MPV_lazy Made with ChatGPT
 
 # install
 1) Go to https://github.com/hooke007/MPV_lazy/releases
