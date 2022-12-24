@@ -5,7 +5,7 @@ English translation for https://github.com/hooke007/MPV_lazy plus auto scaling f
 1) Go to https://github.com/hooke007/MPV_lazy/releases
 2) Install `mpv-lazy-XXX.exe`
 3) Override with `mpv-lazy-XXX-rifeCuda.7z`
-4) Override with these files https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
+4) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
 
 # configure
 Open `portable_config\vs\rife_cuda.vpy` and edit 
