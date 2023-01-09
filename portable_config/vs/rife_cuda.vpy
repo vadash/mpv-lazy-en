@@ -1,13 +1,13 @@
-### rife v4 frame filler, high performance requirements, Nvidia card only
+### RIFE 4.6 TRT for Nvidia RTX 2000+
 
 import vapoursynth as vs
 from vapoursynth import core
 import math
 from vsmlrt import RIFE, RIFEModel, Backend
 
-input = video_in
-colorlv = input.get_frame(0).props._ColorRange
-fmt_fin = input.format.id
+clip = video_in
+colorlv = clip.get_frame(0).props._ColorRange
+fmt_fin = clip.format.id
 
 interpMulti = 2 			# frame rate (integer)
 if video_in_dh <= 720: interpMulti = 6
@@ -22,26 +22,30 @@ elif interpMulti == 6: maxIpps = 1.4 * maxIpps # approximation fix
 if container_fps > 59 :
 	raise Exception("The source frame rate exceeds the limit and the script has been temporarily disabled")
 
+# scale video down (if we cant play it in source quality)
 dsWidth = video_in_dw
 dsHeight = video_in_dh
 clipIpps = container_fps * video_in_dw * video_in_dh * (interpMulti - 1)
 dsPercent = 1.00
 while clipIpps > maxIpps:
   dsPercent -= 0.01
-  dsWidth = int(video_in_dw * dsPercent)
-  dsHeight = int(video_in_dh * dsPercent)
+  dsWidth = math.ceil(video_in_dw * dsPercent)
+  dsHeight = math.ceil(video_in_dh * dsPercent)
   clipIpps = container_fps * dsWidth * dsHeight * (interpMulti - 1)
+if dsPercent < 0.95:
+  dsWidth = math.ceil(dsWidth / 32) * 32
+  dsHeight = math.ceil(dsHeight / 32) * 32
+  clip = core.resize.Spline36(clip, width=dsWidth, height=dsHeight, format=vs.RGBS, matrix_in_s="709")
+else:
+  clip = core.resize.Bilinear(clip, format=vs.RGBS, matrix_in_s="709")
 
-dsWidth = math.ceil(dsWidth / 16) * 16
-dsHeight = math.ceil(dsHeight / 16) * 16
-cut0 = core.resize.Bilinear(clip=input, width=dsWidth, height=dsHeight, format=vs.RGBS, matrix_in_s="709")
-w_tmp = math.ceil(cut0.width / 32) * 32 - cut0.width
-h_tmp = math.ceil(cut0.height / 32) * 32 - cut0.height
-cut1 = core.misc.SCDetect(clip=cut0, threshold=0.2)
-cut2 = cut1.std.AddBorders(right=w_tmp, bottom=h_tmp)
-cut3 = RIFE(clip=cut2, multi=interpMulti, model=RIFEModel.v4_6, backend=Backend.TRT(fp16=True, device_id=GPU, workspace=WS_size, use_cuda_graph=True, num_streams=GPU_t))
-fin = cut3.std.Crop(right=w_tmp, bottom=h_tmp)
-output = fin.resize.Bilinear(format=fmt_fin, matrix_s="709", range=1 if colorlv==0 else None)
-#output = core.text.Text(output, text=(str(clipIpps) + "x " + str(dsWidth) + "x" + str(dsHeight)), alignment=7, scale=2)
-output.set_output()
+# RIFE requires 32x32 blocks
+w_tmp = math.ceil(clip.width / 32) * 32 - clip.width
+h_tmp = math.ceil(clip.height / 32) * 32 - clip.height
+clip = core.misc.SCDetect(clip, threshold=0.2)
+clip = clip.std.AddBorders(right=w_tmp, bottom=h_tmp)
+clip = RIFE(clip=clip, multi=interpMulti, model=RIFEModel.v4_6, backend=Backend.TRT(fp16=True, device_id=GPU, workspace=WS_size, use_cuda_graph=True, num_streams=GPU_t))
+clip = clip.std.Crop(right=w_tmp, bottom=h_tmp)
+clip = clip.resize.Bilinear(format=fmt_fin, matrix_s="709", range=1 if colorlv==0 else None)
+clip.set_output()
 
