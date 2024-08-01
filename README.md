@@ -29,6 +29,10 @@ auto switch when open video. Example, 24 fps switches to 48 hz, 25 to 50, 30 to 
 
 # discuss
 
+!!! DO NOT talk about mpv-lazy there !!!
+
 https://www.svp-team.com/forum/viewtopic.php?id=6281
 
-DO NOT talk about mpv-lazy there. Just good info about models. You can replace 46 model file (onnx) with new one if you need. For example, 4.20 is nice for anime
+!!! DO NOT talk about mpv-lazy there !!!
+
+Just good info about models. You can replace 46 model file (onnx) with new one if you need. For example, 4.20 is nice for anime if you have performance
