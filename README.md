@@ -26,3 +26,9 @@ If you have spare power can try x3 (double computation increase)
 # todo
 
 auto switch when open video. Example, 24 fps switches to 48 hz, 25 to 50, 30 to 60. On player close restores default hz
+
+# discuss
+
+https://www.svp-team.com/forum/viewtopic.php?id=6281
+
+DO NOT talk about mpv-lazy there. Just good info about models. You can replace 46 model file (onnx) with new one if you need. For example, 4.20 is nice for anime
