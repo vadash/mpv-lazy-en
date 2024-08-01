@@ -9,13 +9,16 @@ English translation for https://github.com/hooke007/MPV_lazy focusing on 2060S (
 5) Open video and press shift + 4($)
 
 # configure
-Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV.vpy` and edit 
+Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV.vpy` and edit
+
+1080 is good for 2060s, 1440 can do 3070
 ```
 H_Pre = 1080 ## Integer, pre-downscale source height (fill in your display height)
 ```
 
-4151 is 415 lite. Pretty good model imo
+4151 is 415 lite. Pretty good model imo. 4151 is 29-30% faster than 415
 ```
 Model = 4151 ## <46|415|4151> Model used
 ```
 
+If you have spare power can try x3 (double computation increase)
