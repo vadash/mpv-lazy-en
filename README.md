@@ -39,7 +39,7 @@ Just good info about models. You can replace 46 model file (onnx) with new one i
 
 # altenative
 
-https://www.svp-team.com
+[https://www.svp-team.com](https://www.svp-team.com/wiki/RIFE_AI_interpolation)
 
 +GUI
 
