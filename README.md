@@ -36,3 +36,15 @@ https://www.svp-team.com/forum/viewtopic.php?id=6281
 !!! DO NOT talk about mpv-lazy there !!!
 
 Just good info about models. You can replace 46 model file (onnx) with new one if you need. For example, 4.20 is nice for anime if you have performance
+
+# altenative
+
+https://www.svp-team.com
+
++GUI
+
++Faster updates
+
++Can use in mpc-hc with nvidia super res (quality 1 or 2)
+
+-Paid(wait for 11.11 deal)
