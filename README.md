@@ -45,8 +45,4 @@ Just good info about models. You can replace 46 model file (onnx) with new one i
 
 +GUI
 
-+Faster updates
-
-+Can use in mpc-hc with nvidia super res (quality 1 or 2)
-
 -Paid(wait for 11.11 deal)
