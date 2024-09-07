@@ -7,9 +7,7 @@ English translation for https://github.com/hooke007/MPV_lazy focusing on 2060S (
 3) Override with `mpv-lazy-20240406-vsMega.7z`
 4) Override with [https://github.com/shinchiro/mpv-winbuild-cmake/releases](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240907/mpv-x86_64-v3-20240907-git-0eb5e91.7z)
 5) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
-6) Open video and press
-   Only Rife: shift + 4($)
-   Rife and Nvidia SuperRes: shift + 5($)
+6) Open video and press. Only Rife: shift + 4. Rife and Nvidia SuperRes: shift + 5
 7) Wait few minutes for model to build
 
 # configure
