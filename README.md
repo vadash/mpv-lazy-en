@@ -1,5 +1,5 @@
 # mpv-lazy-en
-English translation for https://github.com/hooke007/MPV_lazy focusing on 2060S (or better) GPU scaling with RIFE
+English translation for https://github.com/hooke007/MPV_lazy focusing on Nvidia 2060S (or better) GPU scaling with RIFE + Nvidia SuperRes
 
 # install
 1) Go to https://github.com/hooke007/MPV_lazy/releases/tag/20240406
