@@ -25,6 +25,12 @@ Model = 450 ## <450|451|452>
 
 If you have spare power can try x3 (double computation increase)
 
+# update models
+
+Download ONNX models from there https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models
+
+Put .onnx file(s) into `mpv-lazy//vs-plugins/models/rife_v2` replacing one of 450 (LQ preset), 451 (MQ preset), 452 (HQ preset) 
+
 # todo
 
 auto switch when open video. Example, 24 fps switches to 48 hz, 25 to 50, 30 to 60. On player close restores default hz
