@@ -8,15 +8,15 @@ English translation for https://github.com/hooke007/MPV_lazy focusing on Nvidia 
 Or follow full install
 
 1) Go to https://github.com/hooke007/MPV_lazy/releases/tag/20240406 or https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1
-2) Extract `hooke007.mpv-lazy-20240406.exe`
-3) Override with `mpv-lazy-20240406-vsMega.7z`
-4) Override with [https://github.com/shinchiro/mpv-winbuild-cmake/releases](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z)
+2) Extract `hooke007.mpv-lazy-20240406.exe` (mpv-lazy minimal build)
+3) Override with `mpv-lazy-20240406-vsMega.7z` (mpv-lazy rife stuff)
+4) Override with [https://github.com/shinchiro/mpv-winbuild-cmake/releases](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z) (fresh mpv player)
 
 Continue
 
-5) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
-6) Open video and press. Only Rife: shift + 2/3/4. Rife + Nvidia SuperRes shift + 5/6/7
-7) Wait few minutes for model to build
+5) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip (my repo with translation and tweaks)
+6) Open video and press: only Rife: shift + 2/3/4, rife + Nvidia SuperRes shift + 5/6/7
+7) Wait few minutes for model to build (one time per resolution)
 
 # configure
 Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV_`LQ/MQ/HQ`.vpy` and edit
