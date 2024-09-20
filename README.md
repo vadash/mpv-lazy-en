@@ -28,7 +28,7 @@ Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV_`LQ/MQ/HQ`.vpy` and edit
 H_Pre = 1080 ## Integer, pre-downscale source height (fill in your display height)
 ```
 
-Model used. 450 is rife 4.6, 451 is rife 4.15 lite, 452 is rife 4.18. 450 is fast but artifacts, 451 is good balance and 452 has decent quality
+Model used. 450 is rife 4.6, 451 is rife 4.15 lite, 452 is rife 4.18. 450 is fastest, 452 has least artifacts
 ```
 Model = 450 ## <450|451|452> 
 ```
@@ -49,18 +49,5 @@ auto switch when open video. Example, 24 fps switches to 48 hz, 25 to 50, 30 to 
 
 # discuss
 
-!!! DO NOT talk about mpv-lazy there !!!
+Good info about models https://www.svp-team.com/forum/viewtopic.php?id=6281
 
-https://www.svp-team.com/forum/viewtopic.php?id=6281
-
-!!! DO NOT talk about mpv-lazy there !!!
-
-Just good info about models. You can replace 46 model file (onnx) with new one if you need. For example, 4.20 is nice for anime if you have performance
-
-# altenative
-
-[https://www.svp-team.com](https://www.svp-team.com/wiki/RIFE_AI_interpolation)
-
-+GUI
-
--Paid(wait for 11.11 deal)
