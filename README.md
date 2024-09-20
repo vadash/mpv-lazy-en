@@ -2,7 +2,8 @@
 English translation for https://github.com/hooke007/MPV_lazy focusing on Nvidia 2060S (or better) GPU scaling with RIFE + Nvidia SuperRes
 
 # install
-Can download portable version here https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ or https://pixeldrain.com/u/rncgrnVC. Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
+
+1-4) Portable version here https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ or https://pixeldrain.com/u/rncgrnVC
 
 Or follow full install
 
@@ -10,6 +11,9 @@ Or follow full install
 2) Extract `hooke007.mpv-lazy-20240406.exe`
 3) Override with `mpv-lazy-20240406-vsMega.7z`
 4) Override with [https://github.com/shinchiro/mpv-winbuild-cmake/releases](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z)
+
+Continue
+
 5) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
 6) Open video and press. Only Rife: shift + 2/3/4. Rife + Nvidia SuperRes shift + 5/6/7
 7) Wait few minutes for model to build
