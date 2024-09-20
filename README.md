@@ -18,7 +18,7 @@ Continue
 6) Open video and press: only Rife: shift + 2/3/4, rife + Nvidia SuperRes shift + 5/6/7
 7) Wait few minutes for model to build (one time per resolution)
 
-![image](https://github.com/user-attachments/assets/51c96db2-4e82-483d-b4d9-3fd9e73395d5)
+![image](https://github.com/user-attachments/assets/e466056d-7bd0-4918-b6df-dd42eb29d99b)
 
 # configure
 Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV_`LQ/MQ/HQ`.vpy` and edit
