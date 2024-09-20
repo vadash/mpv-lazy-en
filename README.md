@@ -26,18 +26,14 @@ You can download the portable version directly from the links below:
 
 Follow these steps for a complete installation:
 
-1. **Download the Executable:**
-   - Visit the [MPV Lazy EN Releases](https://github.com/hooke007/MPV_lazy/releases/tag/20240406) or [my releases](https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1).
-   - Download `hooke007.mpv-lazy-20240406.exe`.
+1. **Mpv-lazy orifinal**
+   - Visit the [MPV Lazy EN Releases](https://github.com/hooke007/MPV_lazy/releases/tag/20240406).
+   - Download `hooke007.mpv-lazy-20240406.exe`, `mpv-lazy-20240406-vsMega.7z`.
 
-2. **Extract Files:**
-   - Extract the downloaded executable.
-
-3. **Override Files:**
-   - Extract and override with `mpv-lazy-20240406-vsMega.7z`.
+2. **Update mpv**
    - Download and override with the [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z).
 
-4. **Final Steps:**
+3. **Intstall translation and tweaks**
    - Override with the [MPV Lazy EN Main Branch](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip).
    - Open a video file and press the following keys:
      - **Only RIFE:** `Shift + 2/3/4`
