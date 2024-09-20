@@ -37,6 +37,8 @@ If you have spare power can try x3 (double computation increase)
 
 Download ONNX models from there https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models
 
+Use v2 models. They are better
+
 Put .onnx file(s) into `mpv-lazy//vs-plugins/models/rife_v2` replacing one of 450 (LQ preset), 451 (MQ preset), 452 (HQ preset) 
 
 # todo
