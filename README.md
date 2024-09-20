@@ -74,7 +74,7 @@ To configure the settings:
 To update the RIFE models:
 
 1. **Download ONNX Models:**
-   - Visit the [AMUSEMENT Club Models](https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models) and download the desired `.onnx` model files.
+   - Visit the [AMUSEMENT Club Models](https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models) and download the desired `.onnx` V2 model files.
 
 2. **Replace Existing Models:**
    - Place the downloaded `.onnx` files into the following directory:
