@@ -2,13 +2,9 @@
 English translation for https://github.com/hooke007/MPV_lazy focusing on Nvidia 2060S (or better) GPU scaling with RIFE + Nvidia SuperRes
 
 # install
-Can download portable version here 
+Can download portable version here https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ or https://pixeldrain.com/u/rncgrnVC. Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip
 
-https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ 
-
-https://pixeldrain.com/u/rncgrnVC
-
-or follow steps below
+Or follow full install
 
 1) Go to https://github.com/hooke007/MPV_lazy/releases/tag/20240406 or https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1
 2) Extract `hooke007.mpv-lazy-20240406.exe`
