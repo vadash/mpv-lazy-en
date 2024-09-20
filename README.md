@@ -64,7 +64,7 @@ To configure the settings:
      ```
      - `450`: RIFE 4.6 – Fast but may have artifacts.
      - `451`: RIFE 4.15 Lite – Good balance between speed and quality.
-     - `452`: RIFE 4.25 – Decent quality with improved performance.
+     - `452`: RIFE 4.25 – Decent quality with slow performance.
 
 3. **Performance Optimization:**
    - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
