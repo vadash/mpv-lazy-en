@@ -30,9 +30,9 @@ Follow these steps for a complete installation:
    - Download `hooke007.mpv-lazy-20240406.exe`, `mpv-lazy-20240406-vsMega.7z`.
 
 2. **Update mpv**
-   - Download and override with the [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z).
+   - Download and override with the `mpv-x86_64-v3-xxx.7z` [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases).
 
-3. **Intstall translation and tweaks**
+3. **Install translation and tweaks**
    - Override with the [MPV Lazy EN Main Branch](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip).
    - Open a video file and press the following keys:
      - **Only RIFE:** `Shift + 2/3/4`
