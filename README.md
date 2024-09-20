@@ -19,8 +19,7 @@ English translation for [MPV_lazy](https://github.com/hooke007/MPV_lazy) focusin
 
 You can download the portable version directly from the links below:
 
-- [Mega.nz](https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ)
-- [PixelDrain](https://pixeldrain.com/u/rncgrnVC)
+- https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1
 
 ### Full Installation
 
