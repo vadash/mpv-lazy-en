@@ -1,53 +1,97 @@
-# mpv-lazy-en
-English translation for https://github.com/hooke007/MPV_lazy focusing on Nvidia 2060S (or better) GPU scaling with RIFE + Nvidia SuperRes
+# MPV Lazy EN
 
-# install
-
-1-4) Portable version here https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ or https://pixeldrain.com/u/rncgrnVC
-
-Or follow full install
-
-1) Go to https://github.com/hooke007/MPV_lazy/releases/tag/20240406 or https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1
-2) Extract `hooke007.mpv-lazy-20240406.exe` (mpv-lazy minimal build)
-3) Override with `mpv-lazy-20240406-vsMega.7z` (mpv-lazy rife stuff)
-4) Override with [https://github.com/shinchiro/mpv-winbuild-cmake/releases](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z) (fresh mpv player)
-
-Continue
-
-5) Override with https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip (my repo with translation and tweaks)
-6) Open video and press: only Rife: shift + 2/3/4, rife + Nvidia SuperRes shift + 5/6/7
-7) Wait few minutes for model to build (one time per resolution)
+English translation for [MPV_lazy](https://github.com/hooke007/MPV_lazy) focusing on NVIDIA RTX 2060 Super (or better) GPU scaling with RIFE and NVIDIA Super Resolution.
 
 ![image](https://github.com/user-attachments/assets/2cb3e22c-e60f-461a-ad5a-51a78a52af4b)
 
-# configure
-Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV_`LQ/MQ/HQ`.vpy` and edit
+## Table of Contents
 
-1080 is good for 2060s+, 1440 is perfect for 3070+
-```
-H_Pre = 1080 ## Integer, pre-downscale source height (fill in your display height)
-```
+- [Installation](#installation)
+  - [Portable Version](#portable-version)
+  - [Full Installation](#full-installation)
+- [Configuration](#configuration)
+- [Updating Models](#updating-models)
+- [Discussion](#discussion)
 
-Model used. 450 is rife 4.6, 451 is rife 4.15 lite, 452 is rife 4.18. 450 is fastest, 452 has least artifacts
-```
-Model = 450 ## <450|451|452> 
-```
+## Installation
 
-If you have spare power can try x3 (double computation increase)
+### Portable Version
 
-# update models
+You can download the portable version directly from the links below:
 
-Download ONNX models from there https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models
+- [Mega.nz](https://mega.nz/folder/6rIEFKzY#eo0QBQFR6YLQ8T5CfK1UHQ)
+- [PixelDrain](https://pixeldrain.com/u/rncgrnVC)
 
-Use v2 models. They are better https://github.com/AmusementClub/vs-mlrt/issues/66
+### Full Installation
 
-Put .onnx file(s) into `mpv-lazy//vs-plugins/models/rife_v2` replacing one of 450 (LQ preset), 451 (MQ preset), 452 (HQ preset) 
+Follow these steps for a complete installation:
 
-# todo
+1. **Download the Executable:**
+   - Visit the [MPV Lazy EN Releases](https://github.com/hooke007/MPV_lazy/releases/tag/20240406) or [my releases](https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1).
+   - Download `hooke007.mpv-lazy-20240406.exe`.
 
-auto switch when open video. Example, 24 fps switches to 48 hz, 25 to 50, 30 to 60. On player close restores default hz
+2. **Extract Files:**
+   - Extract the downloaded executable.
 
-# discuss
+3. **Override Files:**
+   - Extract and override with `mpv-lazy-20240406-vsMega.7z`.
+   - Download and override with the [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z).
 
-Good info about models https://www.svp-team.com/forum/viewtopic.php?id=6281
+4. **Final Steps:**
+   - Override with the [MPV Lazy EN Main Branch](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip).
+   - Open a video file and press the following keys:
+     - **Only RIFE:** `Shift + 2/3/4`
+     - **RIFE + NVIDIA SuperRes:** `Shift + 5/6/7`
+   - Wait a few minutes for the model to build.
 
+## Configuration
+
+To configure the settings:
+
+1. Open the configuration file located at:
+   ```
+   mpv-lazy\portable_config\vs\MEMC_RIFE_NV_{LQ|MQ|HQ}.vpy
+   ```
+
+2. Edit the following parameters based on your GPU:
+
+   - **Pre-downscale Source Height:**
+     ```python
+     H_Pre = 1080  # Integer, pre-downscale source height (fill in your display height)
+     ```
+     - `1080` is recommended for NVIDIA RTX 2060 Super and above.
+     - `1440` is ideal for NVIDIA RTX 3070 and higher.
+
+   - **Model Selection:**
+     ```python
+     Model = 450  # <450|451|452>
+     ```
+     - `450`: RIFE 4.6 – Fast but may have artifacts.
+     - `451`: RIFE 4.15 Lite – Good balance between speed and quality.
+     - `452`: RIFE 4.18 – Decent quality with improved performance.
+
+3. **Performance Optimization:**
+   - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
+
+## Updating Models
+
+To update the RIFE models:
+
+1. **Download ONNX Models:**
+   - Visit the [AMUSEMENT Club Models](https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models) and download the desired `.onnx` model files.
+
+2. **Replace Existing Models:**
+   - Place the downloaded `.onnx` files into the following directory:
+     ```
+     mpv-lazy\vs-plugins\models\rife_v2
+     ```
+   - Replace one of the existing models:
+     - `450` for LQ preset
+     - `451` for MQ preset
+     - `452` for HQ preset
+
+## Discussion
+
+**Important:** Do not discuss MPV Lazy in the official forums.
+
+- Visit the [SVP Team Forum](https://www.svp-team.com/forum/viewtopic.php?id=6281) for discussions related to models and other relevant topics.
