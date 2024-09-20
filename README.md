@@ -11,16 +11,16 @@ English translation for https://github.com/hooke007/MPV_lazy focusing on Nvidia 
 7) Wait few minutes for model to build
 
 # configure
-Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV.vpy` and edit
+Open `mpv-lazy\portable_config\vs\MEMC_RIFE_NV_`LQ/MQ/HQ`.vpy` and edit
 
 1080 is good for 2060s+, 1440 is perfect for 3070+
 ```
 H_Pre = 1080 ## Integer, pre-downscale source height (fill in your display height)
 ```
 
-4151 is 415 lite. Pretty good model imo. 4151 is 20-30% faster than 415
+Model used. 450 is rife 4.6, 451 is rife 4.15 lite, 452 is rife 4.18. 450 is fast but artifacts, 451 is good balance and 452 has decent quality
 ```
-Model = 4151 ## <46|415|4151> Model used
+Model = 450 ## <450|451|452> 
 ```
 
 If you have spare power can try x3 (double computation increase)
