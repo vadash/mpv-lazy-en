@@ -64,7 +64,7 @@ To configure the settings:
      ```
      - `450`: RIFE 4.6 – Fast but may have artifacts.
      - `451`: RIFE 4.15 Lite – Good balance between speed and quality.
-     - `452`: RIFE 4.18 – Decent quality with improved performance.
+     - `452`: RIFE 4.25 – Decent quality with improved performance.
 
 3. **Performance Optimization:**
    - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
@@ -82,9 +82,9 @@ To update the RIFE models:
      mpv-lazy\vs-plugins\models\rife_v2
      ```
    - Replace one of the existing models:
-     - `450` for LQ preset
-     - `451` for MQ preset
-     - `452` for HQ preset
+     - `450.onnx` for LQ preset
+     - `451.onnx` for MQ preset
+     - `452.onnx` for HQ preset
 
 ## Discussion
 
