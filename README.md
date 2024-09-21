@@ -68,6 +68,14 @@ To configure the settings:
 3. **Performance Optimization:**
    - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
 
+## Model speed
+
+From fastest to most slow
+
+1. RIFE 4.6 - 112 fps
+2. RIFE 4.15 Lite - 100 fps
+3. RIFE 4.25 - 84 fps
+
 ## Updating Models
 
 To update the RIFE models:
