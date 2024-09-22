@@ -72,11 +72,11 @@ To configure the settings:
 
 From fastest to most slow
 
-RIFE 4.6 (very old model, fastest) - 112 fps
-RIFE 4.15 lite (decent progress, exploring lite models) - 100 fps
-RIFE 4.26 (finished trained 4.25) - 86 fps
-RIFE 4.25 (very good breakthrough after 4.18) - 84 fps
-RIFE 4.18 - 75 fps
+1. RIFE 4.6 (very old model, fastest) - 112 fps
+2. RIFE 4.15 lite (decent progress, exploring lite models) - 100 fps
+3. RIFE 4.26 (finished trained 4.25) - 86 fps
+4. RIFE 4.25 (very good breakthrough after 4.18) - 84 fps
+5. RIFE 4.18 - 75 fps
 
 ## Updating Models
 
