@@ -76,6 +76,7 @@ From fastest to most slow
 2. RIFE 4.15 lite (decent progress, exploring lite models) - 100 fps
 3. RIFE 4.26 (finished trained 4.25) - 86 fps
 4. RIFE 4.25 (very good breakthrough after 4.18) - 84 fps
+5. RIFE 4.18 - 75 fps
 
 ## Updating Models
 
