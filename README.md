@@ -30,9 +30,9 @@ Follow these steps for a complete installation:
    - Download `hooke007.mpv-lazy-20240406.exe`, `mpv-lazy-20240406-vsMega.7z`.
 
 2. **Update mpv**
-   - Download and override with the [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240920/mpv-x86_64-v3-20240920-git-e3eeaec.7z).
+   - Download and override with the `mpv-x86_64-v3-xxx.7z` [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases).
 
-3. **Intstall translation and tweaks**
+3. **Install translation and tweaks**
    - Override with the [MPV Lazy EN Main Branch](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip).
    - Open a video file and press the following keys:
      - **Only RIFE:** `Shift + 2/3/4`
@@ -62,11 +62,20 @@ To configure the settings:
      Model = 450  # <450|451|452>
      ```
      - `450`: RIFE 4.6 – Fast but may have artifacts.
-     - `451`: RIFE 4.15 Lite – Good balance between speed and quality.
-     - `452`: RIFE 4.25 – Decent quality with slow performance.
+     - `451`: RIFE 4.15 lite – Good balance between speed and quality.
+     - `452`: RIFE 4.26 – Decent quality with slow performance.
 
 3. **Performance Optimization:**
    - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
+
+## Model speed
+
+From fastest to most slow
+
+1. RIFE 4.6 (very old model, fastest) - 112 fps
+2. RIFE 4.15 lite (decent progress, exploring lite models) - 100 fps
+3. RIFE 4.26 (finished trained 4.25) - 86 fps
+4. RIFE 4.25 (very good breakthrough after 4.18) - 84 fps
 
 ## Updating Models
 
