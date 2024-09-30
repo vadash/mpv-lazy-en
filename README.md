@@ -63,7 +63,7 @@ To configure the settings:
      ```
      - `450`: RIFE 4.6 – Fast but may have artifacts.
      - `451`: RIFE 4.15 lite – Good balance between speed and quality.
-     - `452`: RIFE 4.26 – Decent quality with slow performance.
+     - `452`: RIFE 4.25 – Decent quality with slow performance.
 
 3. **Performance Optimization:**
    - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
@@ -74,9 +74,11 @@ From fastest to most slow
 
 1. RIFE 4.6 (very old model, fastest) - 112 fps
 2. RIFE 4.15 lite (decent progress, exploring lite models) - 100 fps
-3. RIFE 4.26 (finished trained 4.25) - 86 fps
-4. RIFE 4.25 (very good breakthrough after 4.18) - 84 fps
-5. RIFE 4.18 - 75 fps
+3. RIFE 4.26 (not worth) - 86 fps
+4. RIFE 4.25 (breakthrough after 4.18) - 84 fps
+5. RIFE 4.18 (another good model) - 75 fps
+
+Try to use 425, 418 or 415lite if you can
 
 ## Updating Models
 
