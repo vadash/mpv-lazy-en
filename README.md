@@ -97,6 +97,12 @@ To update the RIFE models:
      - `451.onnx` for MQ preset
      - `452.onnx` for HQ preset
 
+## Auto start RTX
+
+Add to the end of `mpv.conf`
+
+`vf=vapoursynth="~~/vs/MEMC_RIFE_NV_HQ.vpy",d3d11vpp=scale=2:scaling-mode=nvidia`
+
 ## Discussion
 
 **Important:** Do not discuss MPV Lazy in the official forums.
