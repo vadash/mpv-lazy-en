@@ -97,11 +97,13 @@ To update the RIFE models:
      - `451.onnx` for MQ preset
      - `452.onnx` for HQ preset
 
-## Auto start RTX
+## Auto start interpolation
 
 Add to the end of `mpv.conf`
 
-`vf=vapoursynth="~~/vs/MEMC_RIFE_NV_HQ.vpy",d3d11vpp=scale=2:scaling-mode=nvidia`
+`vf=vapoursynth="~~/vs/MEMC_RIFE_NV_HQ.vpy"`
+
+Set RTX super res autostart (default: on) in `portable_config/scripts/Autovsr.lua`
 
 ## Discussion
 
