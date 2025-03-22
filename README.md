@@ -35,8 +35,7 @@ Follow these steps for a complete installation:
 3. **Install translation and tweaks**
    - Override with the [MPV Lazy EN Main Branch](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip).
    - Open a video file and press the following keys:
-     - **Only RIFE:** `Shift + 2/3/4`
-     - **RIFE + NVIDIA SuperRes:** `Shift + 5/6/7`
+     - **RIFE + NVIDIA SuperRes:** `Shift + 2/3/4` (LQ/MQ/HQ)
    - Wait a few minutes for the model to build.
 
 ## Configuration
