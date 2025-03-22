@@ -68,6 +68,10 @@ To configure the settings:
 3. **Performance Optimization:**
    - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
 
+### Auto change monitor display hz
+
+Check `portable_config/scripts/Set-refresh-rate.lua`. Current version calls portable nircmd and use hardcode values 48 and 75 hz. You can edit it there or delete script.
+
 ## Model speed
 
 From fastest to most slow
