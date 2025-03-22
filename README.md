@@ -61,7 +61,7 @@ To configure the settings:
      ```python
      Model = 450  # <450|451|452>
      ```
-     - `450`: RIFE 4.6 – Fast but may have artifacts.
+     - `450`: RIFE 4.9 – Fast but may have artifacts.
      - `451`: RIFE 4.15 lite – Good balance between speed and quality.
      - `452`: RIFE 4.25 – Decent quality with slow performance.
 
