@@ -1,115 +1,90 @@
 # MPV Lazy EN
 
-English translation for [MPV_lazy](https://github.com/hooke007/MPV_lazy) focusing on NVIDIA RTX 2060 Super (or better) GPU scaling with RIFE and NVIDIA Super Resolution.
+English translation for [MPV_lazy](https://github.com/hooke007/MPV_lazy) focused on NVIDIA RTX video enhancement features (RTX 2060 Super or better).
+Only tested for windows.
 
-![image](https://github.com/user-attachments/assets/2cb3e22c-e60f-461a-ad5a-51a78a52af4b)
+![MPV Lazy Interface](https://i.imgur.com/BXDBdwI.png)
 
-## Table of Contents
+## Features
 
-- [Installation](#installation)
-  - [Portable Version](#portable-version)
-  - [Full Installation](#full-installation)
-- [Configuration](#configuration)
-- [Updating Models](#updating-models)
-- [Discussion](#discussion)
+- RIFE frame interpolation with NVIDIA GPU acceleration
+- NVIDIA DLSS Super Resolution (auto-scaling)
+- Automatic display refresh rate switching
+- Multiple quality presets (LQ/MQ/HQ)
 
-## Installation
+## Full Installation
 
-### Portable Version
+1. **Base Installation**
+   - Download from [MPV Lazy Releases](https://github.com/hooke007/MPV_lazy/releases/tag/20240406):
+     - `hooke007.mpv-lazy-20240406.exe`
+     - `mpv-lazy-20240406-vsMega.7z`
 
-You can download the portable version directly from the links below:
+2. **MPV Update**
+   - Replace files with latest [MPV WinBuild](https://github.com/shinchiro/mpv-winbuild-cmake/releases) (`mpv-x86_64-v3-xxx.7z`)
 
-- https://github.com/vadash/mpv-lazy-en/releases/tag/mpv-lazy-2024V1
+3. **English Translation and tweaks**
+   - Override with files from [MPV Lazy EN](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip)
 
-### Full Installation
+To update for new mpv-lazy just repeat step 3.
 
-Follow these steps for a complete installation:
+## Quick Start
 
-1. **Mpv-lazy orifinal**
-   - Visit the [MPV Lazy EN Releases](https://github.com/hooke007/MPV_lazy/releases/tag/20240406).
-   - Download `hooke007.mpv-lazy-20240406.exe`, `mpv-lazy-20240406-vsMega.7z`.
-
-2. **Update mpv**
-   - Download and override with the `mpv-x86_64-v3-xxx.7z` [MPV WinBuild CMake Release](https://github.com/shinchiro/mpv-winbuild-cmake/releases).
-
-3. **Install translation and tweaks**
-   - Override with the [MPV Lazy EN Main Branch](https://github.com/vadash/mpv-lazy-en/archive/refs/heads/main.zip).
-   - Open a video file and press the following keys:
-     - **RIFE + NVIDIA SuperRes:** `Shift + 2/3/4` (LQ/MQ/HQ)
-   - Wait a few minutes for the model to build.
+1. Install
+2. Open any video file and press `Shift + 2/3/4` for RIFE + NVIDIA SuperRes (LQ/MQ/HQ)
+3. Wait for the model to build (first time only)
 
 ## Configuration
 
-To configure the settings:
+### RIFE Settings
+File: `portable_config/vs/MEMC_RIFE_NV_{LQ|MQ|HQ}.vpy`
 
-1. Open the configuration file located at:
-   ```
-   mpv-lazy\portable_config\vs\MEMC_RIFE_NV_{LQ|MQ|HQ}.vpy
-   ```
+```python
+# Pre-downscale height (adjust for your GPU)
+H_Pre = 1080  # RTX 2060 Super
+# H_Pre = 1440  # RTX 3070 or better
 
-2. Edit the following parameters based on your GPU:
+# Model Selection
+Model = 450  # Fast
+#Model = 451  # Balanced
+#Model = 452  # Quality
+```
 
-   - **Pre-downscale Source Height:**
-     ```python
-     H_Pre = 1080  # Integer, pre-downscale source height (fill in your display height)
-     ```
-     - `1080` is recommended for NVIDIA RTX 2060 Super and above.
-     - `1440` is ideal for NVIDIA RTX 3070 and higher.
+### Auto Features
 
-   - **Model Selection:**
-     ```python
-     Model = 450  # <450|451|452>
-     ```
-     - `450`: RIFE 4.9 – Fast but may have artifacts.
-     - `451`: RIFE 4.15 lite – Good balance between speed and quality.
-     - `452`: RIFE 4.25 – Decent quality with slow performance.
+#### RIFE Interpolation
+Add to `mpv.conf`:
+```
+vf=vapoursynth="~~/vs/MEMC_RIFE_NV_HQ.vpy"
+```
 
-3. **Performance Optimization:**
-   - If you have additional computational power, you can try using `x3` for double the computation, which increases processing speed.
+#### Display Refresh Rate
+Edit values in `portable_config/scripts/Set-refresh-rate.lua`:
+- START_HZ (default: 48)
+- EXIT_HZ (default: 75)
 
-### Auto change monitor display hz
+Requires [NirCmd](https://www.nirsoft.net/utils/nircmd.zip) (included as `nircmd_portable.exe`)
 
-Check `portable_config/scripts/Set-refresh-rate.lua`. Current version calls portable nircmd and use hardcode values 48 and 75 hz. You can edit it there or delete script.
+## Model Performance
 
-## Model speed
+Benchmarked FPS (fastest to slowest):
+1. RIFE 4.6 - 112 fps (oldest)
+2. RIFE 4.15 lite - 100 fps (recommended)
+3. RIFE 4.26 - 86 fps
+4. RIFE 4.25 - 84 fps
+5. RIFE 4.18 - 75 fps
 
-From fastest to most slow
-
-1. RIFE 4.6 (very old model, fastest) - 112 fps
-2. RIFE 4.15 lite (decent progress, exploring lite models) - 100 fps
-3. RIFE 4.26 (not worth) - 86 fps
-4. RIFE 4.25 (breakthrough after 4.18) - 84 fps
-5. RIFE 4.18 (another good model) - 75 fps
-
-Try to use 425, 418 or 415lite if you can
+Recommended: RIFE 4.25, 4.18, or 4.15 lite
 
 ## Updating Models
 
-To update the RIFE models:
+1. Download V2 `.onnx` files from [AMUSEMENT Club Models](https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models)
+2. Place in `mpv-lazy\vs-plugins\models\rife_v2\`:
+   - `450.onnx` - LQ preset (4.9)
+   - `451.onnx` - MQ preset (4.15 lite)
+   - `452.onnx` - HQ preset (4.25)
 
-1. **Download ONNX Models:**
-   - Visit the [AMUSEMENT Club Models](https://github.com/AmusementClub/vs-mlrt/releases/tag/external-models) and download the desired `.onnx` V2 model files.
+## Support
 
-2. **Replace Existing Models:**
-   - Place the downloaded `.onnx` files into the following directory:
-     ```
-     mpv-lazy\vs-plugins\models\rife_v2
-     ```
-   - Replace one of the existing models:
-     - `450.onnx` for LQ preset
-     - `451.onnx` for MQ preset
-     - `452.onnx` for HQ preset
+Discussions: [SVP Team Forum](https://www.svp-team.com/forum/viewtopic.php?id=6281)
 
-## Auto start interpolation
-
-Add to the end of `mpv.conf`
-
-`vf=vapoursynth="~~/vs/MEMC_RIFE_NV_HQ.vpy"`
-
-Set RTX super res autostart (default: on) in `portable_config/scripts/Autovsr.lua`
-
-## Discussion
-
-**Important:** Do not discuss MPV Lazy in the official forums.
-
-- Visit the [SVP Team Forum](https://www.svp-team.com/forum/viewtopic.php?id=6281) for discussions related to models and other relevant topics.
+**Note:** Please do not discuss MPV Lazy in official MPV forums.
