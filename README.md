@@ -85,6 +85,4 @@ Recommended: RIFE 4.25, 4.18, or 4.15 lite
 
 ## Support
 
-Discussions: [SVP Team Forum](https://www.svp-team.com/forum/viewtopic.php?id=6281)
-
-**Note:** Please do not discuss MPV Lazy in official MPV forums.
+Model discussions: [SVP Team Forum](https://www.svp-team.com/forum/viewtopic.php?id=6281)
