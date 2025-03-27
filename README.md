@@ -54,7 +54,11 @@ Model = 450  # Fast
 #### RIFE Interpolation
 Add to `mpv.conf`:
 ```
-vf=vapoursynth="~~/vs/MEMC_RIFE_NV_HQ.vpy"
+### Extra
+ontop = yes
+window-scale=0.33
+vf=vapoursynth="~~/vs/MEMC_RIFE_NV_MQ.vpy"
+sub-visibility=no
 ```
 
 #### Display Refresh Rate
