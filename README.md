@@ -5,6 +5,10 @@ Only tested for windows.
 
 ![MPV Lazy Interface](https://i.imgur.com/BXDBdwI.png)
 
+## Future improvements
+
+RIFE is kinda dead (no more udpates) but nothing better exists for real time playback. I keep using this player every day 
+
 ## Features
 
 - RIFE frame interpolation with NVIDIA GPU acceleration
