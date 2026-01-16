@@ -1,3 +1,6 @@
+!!! new version !!!
+https://github.com/vadash/mpv_PlayKit_en
+
 # MPV Lazy EN
 
 English translation for [MPV_lazy](https://github.com/hooke007/MPV_lazy) focused on NVIDIA RTX video enhancement features (RTX 2060 Super or better).
